@@ -45,7 +45,7 @@ pip install -r requirements.txt
 · 第二个数据需要按照阈值划分，并将其他列数据删除，只需要留下star和commit列，其中star可以按照阈值划分，阈值自定义即可，运行[main.ipynb](./main.ipynb)实现影评数据预处理
 
 最终数据结构如下：
-![data](./img/data.jpg)
+![data](./data.png)
 
 # train model
 ---
@@ -99,6 +99,7 @@ python test.py
 python main.py
 ```
 最终可以实现可视化
+![demo](./demo.png)
 
 # source
 ---
