@@ -1,5 +1,18 @@
 # emotion_Predict
+---
 这个项目将实现一个简单的基于LSTM的情感分析神经网络，并将其使用可视化显示出来
+
+# struction
+---
+以下是模型数据及参数量大小：
+```txt
+LSTM(
+    (embedding): Embedding(222170, 128)
+    (lstm): LSTM(128, 24, batch_first=True)
+    (output): Linear(in_features=24, out_features=2, bias=True)
+)
+```
+以上模型主要使用LSTM进行推理计算，实现二分类
 
 # environments
 ---
@@ -10,7 +23,10 @@ torch==2.1.0+cu118
 tqdm==4.66.1
 tqdm==4.65.0
 ```
-请安装以上包，并配置相关虚拟环境，其他环境不保证成功运行
+请安装以上包，并配置相关虚拟环境，其他环境不保证成功运行，使用以下脚本实现安装环境：
+```cmd
+pip install -r requirements.txt
+```
 
 # dataset
 ---
@@ -69,5 +85,28 @@ for epoch in range(num_epoch):
 ```
 
 # test model
+---
+在运行train.py后，在(./model)目录应该会生成一个模型文件(./model/emo_predict_model_end12.pk1)，并且会生成字典文件(./data/data.vocab)并保存，如果都有，将测试文件放到目录(./data/test.py)，运行以下脚本文件进行测试
+```cmd
+python test.py
+```
+最终会得到相关准确率等数据，可以按照相关需求进行修改
+
+# test demo
+---
+下面文件可以展示一个良好的效果，实现可视化，在模型文件等数据文件都生成了的情况下，运行以下脚本文件：
+```cmd
+python main.py
+```
+最终可以实现可视化
+
+# source
+---
+```txt
+from{
+    the part of this project comes from https://blog.csdn.net/UIBE_day_day_up/article/details/127973787
+    thinks for author
+}
+```
 
 
