@@ -99,7 +99,7 @@ python test.py
 python main.py
 ```
 最终可以实现可视化
-![demo](./demo.png)
+![demo](./result.png)
 
 # source
 ---
